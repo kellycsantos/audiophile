@@ -47,7 +47,7 @@ export const Navbar = () => {
 
                         {
                             linksMenu.map(link =>
-                                <li>
+                                <li key={link.title}>
                                     <Link href={link.link} className={styles.links}>{link.title}</Link>
                                     <div className={styles.cards}>...</div>
                                 </li>
