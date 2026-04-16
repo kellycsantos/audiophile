@@ -16,17 +16,17 @@ export const CardCategories = () => {
         {
             img: EarphonesIcon,
             title: 'earphones',
-            link: '',
+            link: '/earphones',
         },
         {
             img: HeadphonesIcon,
             title: 'headphones',
-            link: '',
+            link: '/headphones',
         },
         {
             img: SpeakersIcon,
             title: 'speakers',
-            link: '',
+            link: '/speakers',
         }
     ]
     return (
