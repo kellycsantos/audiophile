@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, ShoppingCart } from "lucide-react";
 
 import styles from './navbar.module.scss';
+import { CardCategories } from "@components";
 
 export const Navbar = () => {
     const [openMenu, setOpenMenu] = useState<boolean>(false)
@@ -49,10 +50,12 @@ export const Navbar = () => {
                             linksMenu.map(link =>
                                 <li key={link.title}>
                                     <Link href={link.link} className={styles.links}>{link.title}</Link>
-                                    <div className={styles.cards}>...</div>
                                 </li>
                             )
                         }
+                        <div className={styles.cards}>
+                            <CardCategories/>
+                        </div>
                     </ul>
 
                 </nav>

@@ -23,7 +23,8 @@
         left: anchor(left);
         width: 100dvw;
         border-radius: 0 0 6px 6px;
-        &.menu_close{
+
+        &.menu_close {
             display: none;
         }
 
@@ -33,16 +34,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
 
             li {
 
                 .links {
                     display: none;
-                }
-
-                .cards {
-
                 }
             }
         }
@@ -58,20 +54,22 @@
 
 @media screen and (min-width: 768px) {
     .navbar {
-        section{
-            .btn_menu{
+        section {
+            .btn_menu {
                 display: none;
             }
         }
+
         .nav_section {
 
             position: static;
             width: max-content;
             text-transform: uppercase;
             background: none;
-          &.menu_close{
-            display: unset;
-        }
+
+            &.menu_close {
+                display: unset;
+            }
 
             .link_section {
                 width: 100%;
@@ -85,14 +83,15 @@
 
                     .links {
                         display: flex;
-                        color: $white; 
-                        
-                    }
-
-                    .cards {
-                        display: none;
+                        color: $white;
 
                     }
+
+                }
+
+                .cards {
+                    display: none;
+
                 }
             }
 
