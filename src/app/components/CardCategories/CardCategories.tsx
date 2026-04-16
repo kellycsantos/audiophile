@@ -50,3 +50,5 @@ export const CardCategories = () => {
 
     )
 }
+
+export default CardCategories;
