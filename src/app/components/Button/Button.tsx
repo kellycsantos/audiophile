@@ -14,7 +14,7 @@ type PropsButton = {
 export const Button = ({text, variant, onClick} : PropsButton) =>{
     return(
         <button className={`${styles.button} ${styles[variant || '']}`} onClick={onClick}>
-            {text && 'Click me'} {variant === 'outline' && <ChevronRight/>}
+            {text || 'Click me'} {variant === 'outline' && <ChevronRight/>}
         </button>
     )
 }
