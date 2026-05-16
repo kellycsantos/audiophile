@@ -1,0 +1,50 @@
+@use '../../styles/_colors.modules' as *;
+
+.footer{
+    background: $off-black;
+    color: rgba($white, .5);
+    text-align: center;
+    display: grid;
+    grid-template-areas: "logo" "nav" "subtitle" "copyright" "social";
+    place-items: center;
+    gap: 48px;
+    padding-block: 48px 38px;
+
+    .logo{
+        grid-area: logo;
+    }
+
+    .nav_section{
+        text-transform: uppercase;   
+        grid-area: nav;   
+        li{
+            a{
+                color: $white;
+                display: inline-flex;
+                padding-top: 16px;
+                font-size: 13px;
+                font-weight: 700;
+                letter-spacing: 2px;
+            }
+        }
+    }
+    .subtitle{
+        grid-area: subtitle;
+    }
+    .copyright{
+        grid-area: copyright;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .footer{
+        place-items: initial;
+        grid-template-areas: "logo nav" "subtitle social " "copyright copyright";
+        grid-template-columns: 1.2fr 1fr;
+        text-align: left;
+        .nav_section{
+            display: flex;
+            gap: 34px;
+        }
+    }
+}
