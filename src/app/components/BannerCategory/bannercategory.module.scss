@@ -1,0 +1,9 @@
+@use '../../styles/_colors.modules' as *;
+
+.banner{
+    background: $off-black;
+    color: $white;
+    text-align: center;
+    padding-block: 75px;
+    text-transform: uppercase;
+}
