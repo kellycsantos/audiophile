@@ -3,8 +3,6 @@ import { Button } from "../Button";
 
 import styles from './cardproduct.module.scss'
 
-import xx99 from '../../assets/products/xx99.png'
-
 type CardProductProps = {
     id: string,
     img: string,
@@ -16,7 +14,7 @@ type CardProductProps = {
 const CardProduct = ({ img, isNewProduct, productName, description }: CardProductProps) => {
     return (
         <article className={styles.card}>
-            <Image src={img || xx99} alt={productName} />
+            <Image src={img} alt={productName} />
             <section className={styles.cardinfo}>
                 {isNewProduct && <p className='overline'>NEW PRODUCT</p>}
                 <h2>{productName}</h2>
