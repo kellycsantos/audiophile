@@ -1,5 +1,4 @@
 .card{
-    border: 1px solid red;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -9,6 +8,7 @@
         height: 350px;
         object-fit: fill;
         text-align: center;
+
     }
     .cardinfo{
         &>*{
@@ -24,6 +24,12 @@
         text-align: initial;
         gap: clamp(32px, 5vw, 125px);
         max-width: max-content;
+
+        &.reverse{
+            img{
+                order: 1;
+            }
+        }
         img{
             width: 50%;
             max-width: 540px;

@@ -9,11 +9,16 @@ type CardProductProps = {
     isNewProduct: boolean,
     productName: string,
     description: string,
+    revert?: number
 }
 
-const CardProduct = ({ img, isNewProduct, productName, description }: CardProductProps) => {
+const isRevert = (order: number) => {
+    return !!(order % 2)
+}
+
+const CardProduct = ({ img, isNewProduct, productName, description, revert }: CardProductProps) => {
     return (
-        <article className={styles.card}>
+        <article className={`${styles.card} ${styles[Number(isRevert(revert || 0))]}`}>
             <Image src={img} alt={productName} />
             <section className={styles.cardinfo}>
                 {isNewProduct && <p className='overline'>NEW PRODUCT</p>}
