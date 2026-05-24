@@ -23,15 +23,15 @@ export const Navbar = () => {
         },
         {
             title: 'headphones',
-            link: '/headphones'
+            link: '/category/headphones'
         },
         {
             title: 'speakers',
-            link: '/speakers'
+            link: '/category/speakers'
         },
         {
             title: 'earphones',
-            link: '/earphones'
+            link: '/category/earphones'
         },
     ]
     return (

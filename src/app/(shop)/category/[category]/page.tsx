@@ -4,6 +4,9 @@ import CardProduct from "@/app/components/CardProduct/CardProduct";
 import { useState, useEffect } from "react";
 import { getProductsByCategories } from "@/api/endpoint";
 import { useParams } from "next/navigation";
+import BannerCategory from "@/app/components/BannerCategory/BannerCategory";
+
+import styles from './page.module.scss'
 
 type ValidCategories =
     'EARPHONES' | 'HEADPHONES' | 'SPEAKERS'
@@ -26,6 +29,8 @@ const Category = () => {
 
     console.log(products)
     return (
+        <section className={styles.category_page}>
+        <BannerCategory/>
         <>
         {products.map((product: any, index:number) => (
             <CardProduct key={index} productName={product.name} isNewProduct={product.new} img={product.image.desktop}  description={product.description} id={product.id}  />
@@ -33,6 +38,7 @@ const Category = () => {
             <CardCategories />
             <AboutUs />
         </>
+        </section>
     )
 }
 

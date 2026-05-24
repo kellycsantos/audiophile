@@ -14,13 +14,13 @@ export const Footer = () => {
                     <Link href='/home'>Home</Link>
                 </li>
                 <li> 
-                    <Link href='/headphones'>headphones</Link>
+                    <Link href='/category/headphones'>headphones</Link>
                 </li>
                 <li> 
-                    <Link href='/speakers'>speakers</Link>
+                    <Link href='/category/speakers'>speakers</Link>
                 </li>
                 <li> 
-                    <Link href='/earphones'>earphones</Link>
+                    <Link href='/category/earphones'>earphones</Link>
                 </li>
             </ul>
 
