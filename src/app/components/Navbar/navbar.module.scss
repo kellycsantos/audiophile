@@ -23,6 +23,7 @@
         left: anchor(left);
         width: 100dvw;
         border-radius: 0 0 6px 6px;
+        z-index: 1;
         &.menu_close{
             display: none;
         }
@@ -89,10 +90,10 @@
                         
                     }
 
-                    .cards {
-                        display: none;
+                }
+                .cards {
+                    display: none;
 
-                    }
                 }
             }
 
