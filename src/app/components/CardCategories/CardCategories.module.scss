@@ -1,0 +1,47 @@
+@use '../../styles/__colors.module' as *;
+
+.categories_container {
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+    gap: 65px;
+    padding-block: 65px 32px;
+
+    .card_categories {
+        background: $gray-200;
+        width: 320px;
+        height: 175px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 22px;
+
+        .category_img {
+            position: absolute;
+            top: calc(anchor(top) - 45px);
+            filter: drop-shadow(0px 8px 8px rgba($off-black, .65));
+        }
+
+        h6 {
+            margin-block: 80px 17px;
+            text-transform: uppercase;
+        }
+
+        a {
+            display: flex;
+            gap: 5px;
+            color: rgba($black, .5);
+            font-weight: 700;
+            text-decoration: underline;
+
+            svg {
+                color: $primary;
+                stroke-width: 3.5px;
+            }
+
+        }
+    }
+
+}

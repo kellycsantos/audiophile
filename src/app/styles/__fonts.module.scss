@@ -1,0 +1,13 @@
+@use './__colors.module' as *;
+
+@mixin fontConfig($size, $lineHeight, $letterSpace) {
+    font-size: $size;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpace
+}
+
+@mixin subtitle {
+    @include fontConfig(13px, 25px, 1px);
+    color: $primary;
+}
+

@@ -1,16 +1,17 @@
+import { Banner, Bento, CardCategories } from "./components";
+import { AboutUs } from "./components/AboutUs";
 import styles from "./page.module.scss";
 
 export default function Home() {
   return (
     <div className={styles.page}>
+      <header>
+        <Banner />
+      </header>
       <main className={styles.main}>
-      <h1>Olá mundo!</h1>
-      <h2>Olá mundo!</h2>
-      <h3>Olá mundo!</h3>
-      <h4>Olá mundo!</h4>
-      <h5>Olá mundo!</h5>
-      <h6>Olá mundo!</h6>
-      <p className="overline">Olá mundo!</p>
+        <CardCategories />
+        <Bento />
+        <AboutUs />
       </main>
     </div>
   );

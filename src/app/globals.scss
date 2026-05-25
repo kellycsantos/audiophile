@@ -1,6 +1,6 @@
 
-@use './styles/_colors.modules' as *;
-@use './styles/_fonts.modules' as *;
+@use './styles/__colors.module' as *;
+@use './styles/__fonts.module' as *;
 
 :root {
   --background: #ffffff;
@@ -36,9 +36,44 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  text-decoration: none;
+  outline: none;
+  border: 0;
+  list-style: none;
 }
 
+h1 {
+    @include fontConfig(56px, 58px, 2px)
+}
 
+h2 {
+    @include fontConfig(40px, 44px, 1.5px)
+}
+
+h3 {
+    @include fontConfig(32px, 36px, 1.15px)
+}
+
+h4 {
+    @include fontConfig(28px, 38px, 2px)
+}
+
+h5 {
+    @include fontConfig(24px, 33px, 1.7px)
+}
+
+h6 {
+    @include fontConfig(18px, 24px, 1.3px)
+}
+
+p, .body {
+    @include fontConfig(15px, 25px, auto);
+    &.overline {
+        @include fontConfig(14px, 19px, 10px);
+        color: $primary;
+
+    }
+}
 
 @media (prefers-color-scheme: dark) {
   html {

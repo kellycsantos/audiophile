@@ -1,0 +1,102 @@
+@use '../../styles/__colors.module' as *;
+
+.navbar {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 32px 24px;
+    anchor-name: --navbar;
+
+    section {
+        .btn_menu {
+            background: none;
+            color: $white;
+            margin-right: 32px;
+        }
+    }
+
+    .nav_section {
+        background: $white;
+        position-anchor: --navbar;
+        position: absolute;
+        top: anchor(bottom);
+        left: anchor(left);
+        width: 100dvw;
+        border-radius: 0 0 6px 6px;
+        z-index: 1;
+        &.menu_close{
+            display: none;
+        }
+
+
+        .link_section {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            li {
+
+                .links {
+                    display: none;
+                }
+
+                .cards {
+
+                }
+            }
+        }
+
+
+    }
+
+    .btn_cart {
+        color: $white;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        section{
+            .btn_menu{
+                display: none;
+            }
+        }
+        .nav_section {
+
+            position: static;
+            width: max-content;
+            text-transform: uppercase;
+            background: none;
+          &.menu_close{
+            display: unset;
+        }
+
+            .link_section {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                color: $white;
+
+                li {
+
+                    .links {
+                        display: flex;
+                        color: $white; 
+                        
+                    }
+
+                }
+                .cards {
+                    display: none;
+
+                }
+            }
+
+        }
+    }
+}

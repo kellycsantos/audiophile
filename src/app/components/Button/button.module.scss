@@ -1,0 +1,50 @@
+@use '../../styles/__colors.module' as *;
+
+@mixin button($bg,$color){
+    color: $color;
+    background: $bg
+}
+
+.button{
+    cursor: pointer;
+    width: 168px;
+    height: 48px;
+    background: $white;
+    border: 1px solid $off-black;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+
+    &:hover{
+        @include button($off-black, $white) 
+    }
+
+
+    &.primary{
+        @include button($primary,$white);
+        border: none;
+    
+        &:hover{
+             @include button($soft-primary, $white)
+        }
+    }
+
+    &.outline{
+        @include button(none, $black-soft);
+        border: none;
+        width: max-content;
+        height: min-content;
+        display: inline-flex;
+        align-items: center;
+        
+
+
+        &:hover{
+            @include button(none, $primary) 
+        }
+
+        svg{
+            color: $primary;
+        }
+    }
+}

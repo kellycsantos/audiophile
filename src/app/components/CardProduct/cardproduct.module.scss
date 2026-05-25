@@ -1,0 +1,42 @@
+.card{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    img{
+        width: 100%;
+        height: 350px;
+        object-fit: fill;
+        text-align: center;
+
+    }
+    .cardinfo{
+        &>*{
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .card{
+        flex-direction: row;
+        align-items: center;
+        text-align: initial;
+        gap: clamp(32px, 5vw, 125px);
+        max-width: max-content;
+
+        &.reverse{
+            img{
+                order: 1;
+            }
+        }
+        img{
+            width: 50%;
+            max-width: 540px;
+            height: 560px;
+        }
+        .cardinfo{
+            max-width: 445px;
+        }
+    }
+}
