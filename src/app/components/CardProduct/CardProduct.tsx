@@ -9,13 +9,14 @@ type CardProductProps = {
     isNewProduct: boolean,
     productName: string,
     description: string,
+    click?: () => void
 }
 
 const isRevert = (order: number) => {
     return !(order % 2)
 }
 
-const CardProduct = ({ id, img, isNewProduct, productName, description }: CardProductProps) => {
+const CardProduct = ({ id, img, isNewProduct, productName, description, click }: CardProductProps) => {
     return (
         <article className={`${styles.card} ${isRevert(id) && styles.reverse}`}>
             <Image src={img} alt={productName} width={100} height={100}/>
@@ -23,7 +24,7 @@ const CardProduct = ({ id, img, isNewProduct, productName, description }: CardPr
                 {isNewProduct && <p className='overline'>NEW PRODUCT</p>}
                 <h2>{productName}</h2>
                 <p>{description}</p>
-                <Button text="See Product" variant="primary" />
+                <Button onClick={click} text="See Product" variant="primary" />
             </section>
         </article>
     )
