@@ -1,6 +1,6 @@
 
-@use './styles/_colors.modules' as *;
-@use './styles/_fonts.modules' as *;
+@use './styles/__colors.module' as *;
+@use './styles/__fonts.module' as *;
 
 :root {
   --background: #ffffff;
