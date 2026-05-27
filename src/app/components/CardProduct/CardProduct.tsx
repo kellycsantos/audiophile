@@ -38,10 +38,9 @@ const CardProduct = ({ id, img, isNewProduct, productName, description, typeBuy,
                             <Button text="Add to cart" variant="primary" />
                         </div>
                         :
-                        <Button text="See Product" variant="primary" />
+                        <Button onClick={click} text="See Product" variant="primary" />
 
                 }
-                <Button onClick={click} text="See Product" variant="primary" />
             </section>
         </article>
     )
