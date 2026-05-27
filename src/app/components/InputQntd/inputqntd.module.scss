@@ -1,0 +1,21 @@
+@use '../../styles/_colors.module' as *;
+.container{
+    max-width: 120px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: $gray-200;
+
+    input{
+        width: 50%;
+        background: transparent;
+        text-align: center;
+    }
+
+    button{
+        cursor:pointer;
+    }
+
+}
