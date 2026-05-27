@@ -14,6 +14,7 @@ type CardProductProps = {
     productName: string,
     description: string,
     typeBuy?: boolean
+    click?: () => void
 }
 
 const isRevert = (order: number) => {
@@ -23,6 +24,7 @@ const isRevert = (order: number) => {
 const CardProduct = ({ id, img, isNewProduct, productName, description, typeBuy }: CardProductProps) => {
     const [qntdValue, setQntdValue] = useState<number>(1)
     const showButtonBuy = typeBuy
+const CardProduct = ({ id, img, isNewProduct, productName, description, click }: CardProductProps) => {
     return (
         <article className={`${styles.card} ${isRevert(id) && styles.reverse}`}>
             <Image src={img} alt={productName} width={100} height={100} />
@@ -40,6 +42,7 @@ const CardProduct = ({ id, img, isNewProduct, productName, description, typeBuy 
                         <Button text="See Product" variant="primary" />
 
                 }
+                <Button onClick={click} text="See Product" variant="primary" />
             </section>
         </article>
     )
