@@ -16,3 +16,20 @@
         }
     }
 }
+@media screen and (min-width: 768px) {
+    .about_us{
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 64px;
+
+        .info{
+            text-align: left;
+            order: -1;
+          
+        }
+        img{
+            max-width: 570px;
+            height: 588px;
+        }
+    }
+}
