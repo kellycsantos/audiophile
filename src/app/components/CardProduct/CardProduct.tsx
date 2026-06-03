@@ -13,6 +13,7 @@ type CardProductProps = {
     isNewProduct: boolean,
     productName: string,
     description: string,
+    price?: number,
     typeBuy?: boolean,
     click?: () => void
 }
@@ -21,16 +22,17 @@ const isRevert = (order: number) => {
     return !(order % 2)
 }
 
-const CardProduct = ({ id, img, isNewProduct, productName, description, typeBuy, click }: CardProductProps) => {
+const CardProduct = ({ id, img, isNewProduct, productName, description,price, typeBuy, click }: CardProductProps) => {
     const [qntdValue, setQntdValue] = useState<number>(1)
     const showButtonBuy = typeBuy
     return (
-        <article className={`${styles.card} ${isRevert(id) && styles.reverse}`}>
+        <article className={`${styles.card} ${isRevert(id) && !typeBuy && styles.reverse}`}>
             <Image src={img} alt={productName} width={100} height={100} />
             <section className={styles.cardinfo}>
-                {isNewProduct && !typeBuy && <p className='overline'>NEW PRODUCT</p>}
+                {isNewProduct  && <p className='overline'>NEW PRODUCT</p>}
                 <h2>{productName}</h2>
-                <p>{description}</p>
+                <p className={styles.description}>{description}</p>
+               {price && <h5>$ {price}</h5>}
                 {
                     showButtonBuy ?
                         <div className={styles.button_container}>
@@ -39,7 +41,6 @@ const CardProduct = ({ id, img, isNewProduct, productName, description, typeBuy,
                         </div>
                         :
                         <Button onClick={click} text="See Product" variant="primary" />
-
                 }
             </section>
         </article>
