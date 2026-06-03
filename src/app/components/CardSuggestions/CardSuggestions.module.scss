@@ -1,0 +1,41 @@
+.card_suggestions {
+    h5 {
+        text-transform: uppercase;
+        margin-block: 48px;
+    }
+
+    .suggestions_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+
+        .suggestions_item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h5{
+                margin-block: 24px;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 8px;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .card_suggestions {
+        max-width: 1110px;
+
+        .suggestions_container {
+            flex-direction: row;
+            justify-content: center;
+            gap: 24px;
+        }
+    }
+}
