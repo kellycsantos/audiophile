@@ -8,12 +8,12 @@ import { getProductBySlug } from "@/api/endpoint";
 import { ProductType } from "@/app/types";
 
 import styles from './page.module.scss'
-import { AboutUs, CardCategories } from "@/app/components";
+import { AboutUs, CardCategories, ProductImagesGrid } from "@/app/components";
 
 const Product = () => {
     const { slug } = useParams()
     const [product, setProduct] = useState<ProductType | null>(null);
-   
+
     const getProduct = (slug: string) => {
         const data = getProductBySlug(slug)
         if (data) setProduct(data)
@@ -51,14 +51,15 @@ const Product = () => {
                             <li key={index} className='body'>
                                 <span className={styles.quantityItem}>
                                     {item.quantity}x
-                                </span> 
+                                </span>
                                 {item.item}
                             </li>
                         ))}
                     </ul>
                 </section>
             </div>
-                 <CardCategories/>
+            <ProductImagesGrid images={product?.gallery} />
+            <CardCategories />
             <AboutUs />
         </>
     )
