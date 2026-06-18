@@ -37,34 +37,37 @@ export const Navbar = () => {
     ]
     return (
         <>
-            <div className={styles.navbar}>
-                <section>
-                    <button className={styles.btn_menu} onClick={() => toogleMenu()}> {!openMenu ? <Menu /> : <X />} </button>
-                    <Image src={audiophile} alt='Audiophile' sizes="auto" />
-                </section>
+            <div className={styles.navbar_container}>
+                <div className={styles.navbar}>
+                    <section>
+                        <button className={styles.btn_menu} onClick={() => toogleMenu()}> {!openMenu ? <Menu /> : <X />} </button>
+                        <Image src={audiophile} alt='Audiophile' sizes="auto" />
+                    </section>
 
-                <nav className={`${styles.nav_section} ${!openMenu ? styles.menu_close : ''} `}>
-                    <ul className={styles.link_section}>
+                    <nav className={`${styles.nav_section} ${!openMenu ? styles.menu_close : ''} `}>
+                        <ul className={styles.link_section}>
 
-                        {
-                            linksMenu.map(link =>
-                                <li key={link.title}>
-                                    <Link href={link.link} className={styles.links}>{link.title}</Link>
-                                </li>
-                            )
-                        }
-                         <div className={styles.cards}>
-                                     
-                                        <CardCategories/>
-                                    </div>
-                    </ul>
+                            {
+                                linksMenu.map(link =>
+                                    <li key={link.title}>
+                                        <Link href={link.link} className={styles.links}>{link.title}</Link>
+                                    </li>
+                                )
+                            }
+                            <div className={styles.cards}>
 
-                </nav>
+                                <CardCategories />
+                            </div>
+                        </ul>
 
-                <Link className={styles.btn_cart} color="#FFFFFF" href="/cart">
-                    <ShoppingCart />
-                </Link>
+                    </nav>
+
+                    <Link className={styles.btn_cart} color="#FFFFFF" href="/cart">
+                        <ShoppingCart />
+                    </Link>
+                </div>
             </div>
+
         </>
     )
 }

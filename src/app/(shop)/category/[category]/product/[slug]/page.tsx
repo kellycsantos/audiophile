@@ -28,6 +28,7 @@ const Product = () => {
         <>
             {product &&
                 <>
+                <div className={styles.about_product_container}>
                     <CardProduct
                         id={product.id}
                         img={product.image.desktop}
@@ -58,6 +59,7 @@ const Product = () => {
                                 ))}
                             </ul>
                         </section>
+                    </div>
                     </div>
                     <ProductImagesGrid images={product.gallery} />
                     <CardSuggestions items={product.others} />
