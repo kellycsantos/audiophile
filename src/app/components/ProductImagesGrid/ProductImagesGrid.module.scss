@@ -1,35 +1,43 @@
-.images_grid {
-    display: grid;
-    grid-template-areas: "first" "second" "third";
-    gap: 1rem;
+@use '../../styles/_limit.module' as *;
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 16px;
+.images_grid_container {
+    @include limit-container(transparent);
 
-        &:nth-child(1) {
-            grid-area: first;
-        }
+    .images_grid {
+        display: grid;
+        grid-template-areas: "first" "second" "third";
+        gap: .5rem;
 
-        &:nth-child(2) {
-            grid-area: second;
-        }
 
-        &:nth-child(3) {
-            grid-area: third;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+
+            &:nth-child(1) {
+                grid-area: first;
+            }
+
+            &:nth-child(2) {
+                grid-area: second;
+            }
+
+            &:nth-child(3) {
+                grid-area: third;
+            }
         }
     }
+
 }
 
 @media (min-width: 768px) {
-    .images_grid {
-
-        grid-template-areas: "first third"
-            "second third";
-        max-width: 800px;
-        max-height: 540px;
+    .images_grid_container {
+        .images_grid {
+            grid-template-areas: "first third"
+                "second third";
+            width: 800px;
+        }
 
     }
 }
