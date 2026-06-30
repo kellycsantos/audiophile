@@ -30,9 +30,16 @@ export type ProductType = {
   categoryImage: ImagesType;
   new: boolean;
   price: number;
+  quantity?: number;
   description: string;
   features: string;
   includes: IncludesType[];
   gallery: GalleryType;
   others: OtherProductType[];
 };
+
+export type CartType = {
+  totalAmount: number;
+  totalItems: number
+  items: ProductType[];
+}

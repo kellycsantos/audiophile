@@ -41,9 +41,13 @@
 
         .product_info {
             display: flex;
-            justify-content: space-between;
+            gap: 16px;
             align-items: center;
             margin-block: 24px;
+
+             >:last-child{
+                  margin-left: auto;
+            }
         }
 
         .summary {
