@@ -1,15 +1,13 @@
 'use client';
-
-import CardProduct from "@/app/components/CardProduct/CardProduct";
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 
 import { getProductBySlug } from "@/api/endpoint";
-import { ProductType } from "@/app/types";
+import { ProductType } from "@types";
 
 import styles from './page.module.scss'
-import { AboutUs, CardCategories, ProductImagesGrid, CardSuggestions } from "@/app/components";
-import { useCartStore } from "@/app/store";
+import { AboutUs, CardCategories, ProductImagesGrid, CardSuggestions,CardProduct} from "@components";
+import { useCartStore } from "@store";
 
 const Product = () => {
     const { slug } = useParams()

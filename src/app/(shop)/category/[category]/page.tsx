@@ -1,10 +1,8 @@
 'use client'
-import { AboutUs, CardCategories } from "@/app/components";
-import CardProduct from "@/app/components/CardProduct/CardProduct";
+import { AboutUs, CardCategories, CardProduct, BannerCategory} from "@components";
 import { useState, useEffect } from "react";
 import { getProductsByCategories } from "@/api/endpoint";
 import { useParams, useRouter } from "next/navigation";
-import BannerCategory from "@/app/components/BannerCategory/BannerCategory";
 
 import styles from './page.module.scss'
 
@@ -29,7 +27,6 @@ const Category = () => {
         handleValidCategory(category?.toString())
     }, [category])
 
-    console.log(products)
     return (
         <section className={styles.category_page}>
             <BannerCategory />

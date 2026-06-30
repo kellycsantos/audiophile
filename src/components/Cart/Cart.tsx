@@ -1,5 +1,5 @@
 'use client';
-import { useCartStore } from '@/app/store';
+import { useCartStore } from '@store';
 import { Button } from '../Button';
 import InputQtd from '../InputQntd/InputQntd';
 import styles from './cart.module.scss';
@@ -25,7 +25,7 @@ const Cart = ({ isOpen }: any) => {
                     items.length &&
                     items.map(item => (
 
-                        <div className={styles.product_info}>
+                        <div className={styles.product_info} key={item.id}>
                             <Image src={item.image.mobile} width={70} height={70} alt={item.description} />
                             <div>
                                 <p>{item.name}</p>
