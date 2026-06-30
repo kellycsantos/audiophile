@@ -15,7 +15,7 @@ type CardProductProps = {
     description: string,
     price?: number,
     typeBuy?: boolean,
-    click?: () => void
+    click?: any //TODO : melhorar tipagem
 }
 
 const isRevert = (order: number) => {
@@ -37,7 +37,7 @@ const CardProduct = ({ id, img, isNewProduct, productName, description,price, ty
                     showButtonBuy ?
                         <div className={styles.button_container}>
                             <InputQtd value={qntdValue} onChange={setQntdValue} />
-                            <Button text="Add to cart" variant="primary" />
+                            <Button text="Add to cart" variant="primary" onClick={() => click(qntdValue)}/>
                         </div>
                         :
                         <Button onClick={click} text="See Product" variant="primary" />

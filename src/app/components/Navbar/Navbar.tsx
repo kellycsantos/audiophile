@@ -22,7 +22,7 @@ export const Navbar = () => {
 
     useEffect(() => {
         setOpenMenu(false)
-        setOpenCart(true)
+        setOpenCart(false)    
     }, [])
     const linksMenu = [
         {
