@@ -9,6 +9,7 @@
         justify-content: space-between;
         padding: 32px 24px;
         anchor-name: --navbar;
+
         
         section {
             .btn_menu {
@@ -53,6 +54,8 @@
 
         .btn_cart {
             color: $white;
+            background: none;
+            cursor: pointer;
         }
     }
 }
