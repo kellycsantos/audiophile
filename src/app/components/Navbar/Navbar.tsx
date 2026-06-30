@@ -7,15 +7,22 @@ import { Menu, X, ShoppingCart } from "lucide-react";
 
 import styles from './navbar.module.scss';
 import { CardCategories } from "../CardCategories";
+import Cart from "../Cart/Cart";
 
 export const Navbar = () => {
     const [openMenu, setOpenMenu] = useState<boolean>(false)
+    const [openCart, setOpenCart] = useState<boolean>(false)
+
     const toogleMenu = () => {
         setOpenMenu(prev => !prev)
+    }
+    const toogleCart = () => {
+        setOpenCart(prev => !prev)
     }
 
     useEffect(() => {
         setOpenMenu(false)
+        setOpenCart(true)
     }, [])
     const linksMenu = [
         {
@@ -62,9 +69,10 @@ export const Navbar = () => {
 
                     </nav>
 
-                    <Link className={styles.btn_cart} color="#FFFFFF" href="/cart">
+                    <button className={styles.btn_cart} color="#FFFFFF" onClick={() => toogleCart()}>
                         <ShoppingCart />
-                    </Link>
+                    </button>
+                    <Cart isOpen={openCart}/>
                 </div>
             </div>
 
