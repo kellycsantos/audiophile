@@ -47,4 +47,4 @@ const CardProduct = ({ id, img, isNewProduct, productName, description,price, ty
     )
 }
 
-export default CardProduct;
+export  {CardProduct};

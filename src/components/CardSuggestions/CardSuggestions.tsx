@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import Image from 'next/image';
 import styles from './CardSuggestions.module.scss'
 import { Button } from '@components';
-import {OtherProductType} from "@/app/types";
+import {OtherProductType} from "@types";
 
 type CardSuggestionsProps = {
   items: OtherProductType[]

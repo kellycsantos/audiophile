@@ -1,5 +1,5 @@
-@use '../../../../../styles/_colors.module' as *;
-@use '../../../../../styles/_limit.module' as *;
+@use '../../../../../../styles/_colors.module' as *;
+@use '../../../../../../styles/_limit.module' as *;
 
 .about_product_container {
     @include limit-container(transparent);

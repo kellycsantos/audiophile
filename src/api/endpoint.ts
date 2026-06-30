@@ -1,4 +1,4 @@
-import data from '../app/data.json'
+import data from '../data.json'
 
 export const getAllProducts = () => {
     return data

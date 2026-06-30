@@ -11,4 +11,4 @@ const BannerCategory = () => {
     )
 }
 
-export default BannerCategory;
+export {BannerCategory};
