@@ -16,7 +16,7 @@ export const CardCategories = () => {
         {
             img: EarphonesIcon,
             title: 'earphones',
-            link: '/category/speakers',
+            link: '/category/earphones',
         },
         {
             img: HeadphonesIcon,
