@@ -13,10 +13,10 @@ export const Navbar = () => {
     const [openMenu, setOpenMenu] = useState<boolean>(false)
     const [openCart, setOpenCart] = useState<boolean>(false)
 
-    const toogleMenu = () => {
+    const toggleMenu = () => {
         setOpenMenu(prev => !prev)
     }
-    const toogleCart = () => {
+    const toggleCart = () => {
         setOpenCart(prev => !prev)
     }
 
@@ -47,7 +47,7 @@ export const Navbar = () => {
             <div className={styles.navbar_container}>
                 <div className={styles.navbar}>
                     <section>
-                        <button className={styles.btn_menu} onClick={() => toogleMenu()}> {!openMenu ? <Menu /> : <X />} </button>
+                        <button className={styles.btn_menu} onClick={() => toggleMenu()}> {!openMenu ? <Menu /> : <X />} </button>
                         <Image src={audiophile} alt='Audiophile' sizes="auto" />
                     </section>
 
@@ -69,7 +69,7 @@ export const Navbar = () => {
 
                     </nav>
 
-                    <button className={styles.btn_cart} color="#FFFFFF" onClick={() => toogleCart()}>
+                    <button className={styles.btn_cart} color="#FFFFFF" aria-label={openCart ? 'close cart' : 'open cart'} onClick={() => toggleCart()}>
                         <ShoppingCart />
                     </button>
                     <Cart isOpen={openCart}/>

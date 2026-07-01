@@ -8,7 +8,7 @@ export const AboutUs = () => {
     return (
         <div className={styles.about_us_container}>
             <div className={styles.about_us}>
-                <Image src={aboutImg} alt={''} />
+                <Image src={aboutImg} alt={''} aria-hidden />
 
                 <div className={styles.info}>
                     <h2>Bringing you the <span>best</span> audio gear</h2>

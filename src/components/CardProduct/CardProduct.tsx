@@ -41,7 +41,7 @@ const CardProduct = ({ id, img, isNewProduct, productName, description,price, ty
                             <Button text="Add to cart" variant="primary" onClick={() => click?.(qntdValue)}/>
                         </div>
                         :
-                        <Button onClick={() => click} text="See Product" variant="primary" />
+                        <Button onClick={() => click?.()} text="See Product" variant="primary" />
                 }
             </section>
         </article>

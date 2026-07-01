@@ -20,7 +20,7 @@ const Cart = ({ isOpen }: {isOpen: boolean}) => {
         <>
             <div className={styles.overlay}>
             </div>
-            <div className={styles.cart_container}>
+            <div className={styles.cart_container} aria-modal>
                 <header>
                     <h6>cart ({totalItems})</h6>
                     <button onClick={() => removeAllItems()}>Remove all</button>
@@ -36,7 +36,7 @@ const Cart = ({ isOpen }: {isOpen: boolean}) => {
                                 <p>$ {item.price}</p>
                             </div>
 
-                            <InputQtd value={item.quantity ?? 1} onChange={() => console.log(1)} />
+                            <InputQtd value={item.quantity ?? 1} onChange={() => {}} />
                         </div>
                     ))
                 }

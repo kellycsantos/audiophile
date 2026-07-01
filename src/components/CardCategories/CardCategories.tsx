@@ -39,7 +39,7 @@ export const CardCategories = () => {
                             style={{ positionAnchor: `--card-${category.title}` }}
                             src={category.img}
                             alt={category.title}
-                            height='100'
+                            height={100}
                             width={100} />
                         <h6>{category.title}</h6>
                         <Link href={category.link}>SHOP <ChevronRight /> </Link>
