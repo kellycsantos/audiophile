@@ -1,4 +1,4 @@
-@use '../../styles/_limit.module' as *;
+@use '../../styles/__limit.module' as *;
 
 .images_grid_container {
     @include limit-container(transparent);
