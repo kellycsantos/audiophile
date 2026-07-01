@@ -37,7 +37,7 @@ const Product = () => {
                             description={product.description}
                             price={product.price}
                             typeBuy={true}
-                            click={(qntd: number) => addItem(product, qntd)}
+                            click={(qntd: number | undefined) => addItem(product, qntd ?? 1)}
                         />
 
 
@@ -62,7 +62,7 @@ const Product = () => {
                             </section>
                         </div>
                     </div>
-                    <ProductImagesGrid images={product.gallery} />
+                    <ProductImagesGrid images={product.gallery} alt={product.name} />
                     <CardSuggestions items={product.others} />
                     <CardCategories />
                     <AboutUs />
