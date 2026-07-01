@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, X, ShoppingCart } from "lucide-react";
 
-import styles from './navbar.module.scss';
+import styles from './Navbar.module.scss';
 import { CardCategories } from "../CardCategories";
 import Cart from "../Cart/Cart";
 

@@ -1,6 +1,6 @@
 'use client'
 import { ChevronRight } from 'lucide-react';
-import styles from './button.module.scss';
+import styles from './Button.module.scss';
 import React from 'react';
 
 

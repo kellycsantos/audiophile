@@ -1,6 +1,6 @@
 'use client'
 
-import styles from './inputqntd.module.scss'
+import styles from './InputQntd.module.scss'
 
 type InputQtdProps = {
   value: number

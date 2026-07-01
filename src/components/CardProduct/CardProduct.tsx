@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { Button } from "../Button";
 
-import styles from './cardproduct.module.scss'
+import styles from './CardProduct.module.scss'
 import InputQtd from "../InputQntd/InputQntd";
 import React from "react";
 

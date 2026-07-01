@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import aboutImg from '../../assets/about-us-img.png'
 
-import styles from './aboutus.module.scss'
+import styles from './AboutUs.module.scss'
 
 export const AboutUs = () => {
     return (

@@ -4,7 +4,7 @@ import yx1 from '../../assets/products-emphasys/yx1_earphones.png'
 
 import Image from 'next/image';
 import { Button } from '../Button'
-import styles from './bentoitems.module.scss'
+import styles from './BentoItems.module.scss'
 
 export const Bento = () => {
     return (
