@@ -50,8 +50,8 @@ const Product = () => {
                             <section className={styles.includes}>
                                 <h3>In the box</h3>
                                 <ul>
-                                    {product?.includes.map((item, index) => (
-                                        <li key={index} className='body'>
+                                    {product?.includes.map(item => (
+                                        <li key={item.item} className='body'>
                                             <span className={styles.quantityItem}>
                                                 {item.quantity}x
                                             </span>
