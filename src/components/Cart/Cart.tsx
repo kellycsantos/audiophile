@@ -5,7 +5,9 @@ import InputQtd from '../InputQntd/InputQntd';
 import styles from './cart.module.scss';
 import Image from 'next/image';
 
-const Cart = ({ isOpen }: any) => {
+
+
+const Cart = ({ isOpen }: {isOpen: boolean}) => {
 
     const cartStore = useCartStore()
 

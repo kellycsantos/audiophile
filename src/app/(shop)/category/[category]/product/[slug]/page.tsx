@@ -37,7 +37,7 @@ const Product = () => {
                             description={product.description}
                             price={product.price}
                             typeBuy={true}
-                            click={(qntd: number) => addItem(product, qntd)}
+                            click={(qntd: number | undefined) => addItem(product, qntd ?? 1)}
                         />
 
 
@@ -50,8 +50,8 @@ const Product = () => {
                             <section className={styles.includes}>
                                 <h3>In the box</h3>
                                 <ul>
-                                    {product?.includes.map((item, index) => (
-                                        <li key={index} className='body'>
+                                    {product?.includes.map(item => (
+                                        <li key={item.item} className='body'>
                                             <span className={styles.quantityItem}>
                                                 {item.quantity}x
                                             </span>
@@ -62,7 +62,7 @@ const Product = () => {
                             </section>
                         </div>
                     </div>
-                    <ProductImagesGrid images={product.gallery} />
+                    <ProductImagesGrid images={product.gallery} alt={product.name} />
                     <CardSuggestions items={product.others} />
                     <CardCategories />
                     <AboutUs />

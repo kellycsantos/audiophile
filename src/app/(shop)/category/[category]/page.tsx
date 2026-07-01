@@ -5,11 +5,12 @@ import { getProductsByCategories } from "@/api/endpoint";
 import { useParams, useRouter } from "next/navigation";
 
 import styles from './page.module.scss'
+import { ProductType } from "@/types";
 
 const Category = () => {
     const router = useRouter()
     const { category } = useParams()
-    const [products, setProducts] = useState<any>([])
+    const [products, setProducts] = useState<ProductType[]>([])
 
     const handleValidCategory = (category: string | undefined) => {
         if (!category) {
@@ -31,9 +32,9 @@ const Category = () => {
         <section className={styles.category_page}>
             <BannerCategory />
             <>
-                {products.map((product: any, index: number) => (
+                {products.map((product: ProductType) => (
                     <CardProduct
-                        key={index}
+                        key={product.id}
                         productName={product.name}
                         isNewProduct={product.new}
                         img={product.image.desktop}

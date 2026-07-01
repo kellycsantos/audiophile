@@ -6,6 +6,7 @@ import { Button } from "../Button";
 
 import styles from './cardproduct.module.scss'
 import InputQtd from "../InputQntd/InputQntd";
+import React from "react";
 
 type CardProductProps = {
     id: number,
@@ -15,7 +16,7 @@ type CardProductProps = {
     description: string,
     price?: number,
     typeBuy?: boolean,
-    click?: any //TODO : melhorar tipagem
+    click?: (quantity?: number) => void; //TODO : melhorar tipagem
 }
 
 const isRevert = (order: number) => {
@@ -37,7 +38,7 @@ const CardProduct = ({ id, img, isNewProduct, productName, description,price, ty
                     showButtonBuy ?
                         <div className={styles.button_container}>
                             <InputQtd value={qntdValue} onChange={setQntdValue} />
-                            <Button text="Add to cart" variant="primary" onClick={() => click(qntdValue)}/>
+                            <Button text="Add to cart" variant="primary" onClick={() => click?.(qntdValue)}/>
                         </div>
                         :
                         <Button onClick={() => click()} text="See Product" variant="primary" />
