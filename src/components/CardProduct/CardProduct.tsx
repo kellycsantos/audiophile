@@ -16,7 +16,7 @@ type CardProductProps = {
     description: string,
     price?: number,
     typeBuy?: boolean,
-    click?: (quantity?: number) => void; //TODO : melhorar tipagem
+    click?: (quantity?: number) => void;
 }
 
 const isRevert = (order: number) => {
