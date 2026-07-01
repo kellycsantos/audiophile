@@ -1,0 +1,49 @@
+@use '../../../../../../styles/_colors.module' as *;
+@use '../../../../../../styles/_limit.module' as *;
+
+.about_product_container {
+    @include limit-container(transparent);
+
+    .about_product {
+        display: flex;
+        flex-wrap: wrap;
+        gap: clamp(32px, 5vw, 125px);
+        margin-block: 120px;
+
+
+        .features {
+            text-align: justify;
+        }
+
+        .includes {
+            max-width: 340px;
+
+            .quantityItem {
+                color: $primary;
+                margin-right: 24px;
+                font-weight: 700;
+            }
+        }
+
+        h3 {
+            text-transform: uppercase;
+            margin-bottom: 32px;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .about_product {
+
+
+        .includes {
+            max-width: 340px;
+
+        }
+
+        .features {
+            max-width: 540px;
+            width: 50%;
+        }
+    }
+}

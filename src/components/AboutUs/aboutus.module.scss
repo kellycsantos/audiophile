@@ -1,0 +1,45 @@
+@use '../../styles/__colors.module' as *;
+@use '../../styles/__limit.module' as *;
+
+.about_us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .info {
+        text-align: center;
+        max-width: 400px;
+
+        h2 {
+            text-transform: uppercase;
+            margin-block: 40px 32px;
+
+            span {
+                color: $primary;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about_us_container {
+        @include limit-container('transparent');
+
+        .about_us {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 64px;
+
+            .info {
+                text-align: left;
+                order: -1;
+
+            }
+
+            img {
+                max-width: 570px;
+                height: 588px;
+            }
+        }
+    }
+}

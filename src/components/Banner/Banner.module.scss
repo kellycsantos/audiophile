@@ -1,0 +1,56 @@
+@use '../../styles/__colors.module' as *;
+@use '../../styles/__fonts.module' as *;
+@use '../../styles/__limit.module' as *;
+
+
+.banner_container{
+    @include limit_container($off-black);
+    
+    .banner {
+        min-height: 50dvh;
+        background: $off-black url('../../assets/headphone-banner-bg.png') no-repeat center;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .banner_description {
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+            gap: 24px;
+            max-width: 390px;
+            color: $white;
+            text-align: center;
+            
+            h1 {
+                text-transform: uppercase;
+            }
+            
+            p {
+                padding-inline: 9px;
+            }
+            
+            .banner_emphasys {
+                color: $gray-soft;
+                
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    .banner_container{
+        .banner {
+            background-position: right;
+            background-size: contain;
+            justify-content: start;
+    
+            .banner_description {
+                justify-self: left;
+                text-align: initial;
+                place-items: initial;
+            }
+        }
+    }
+}

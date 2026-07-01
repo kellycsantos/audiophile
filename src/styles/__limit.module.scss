@@ -1,0 +1,14 @@
+@mixin limit-container($background){
+  display: flex;
+  background: $background;
+  width: 100dvw;
+  flex-direction: column;
+  padding-inline: 25px;
+
+
+  > *{
+    max-width: 1500px;
+    width: 100%;
+    align-self: center;
+  }
+}

@@ -1,5 +1,4 @@
-import { Banner, Bento, CardCategories } from "./components";
-import { AboutUs } from "./components/AboutUs";
+import { Banner, Bento, CardCategories, AboutUs } from "@components";
 import styles from "./page.module.scss";
 
 export default function Home() {

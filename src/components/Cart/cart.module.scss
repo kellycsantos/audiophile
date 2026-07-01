@@ -1,0 +1,80 @@
+@use '../../styles/_colors.module' as *;
+@use '../../styles/_fonts.module' as *;
+
+.overlay {
+    width: 100dvw;
+    height: 98%;
+    position: absolute;
+    position-anchor: --navbar;
+    top: anchor(bottom);
+    left: 0;
+    background: $black-soft;
+    z-index: 10;
+}
+
+
+.cart_container {
+    position: absolute;
+    position-anchor: --navbar;
+    top: calc(anchor(bottom) + 24px);
+    right: 50%;
+    transform: translateX(50%);
+    width: 85dvw;
+    max-width: 450px;
+    padding: 24px 16px;
+    border-radius: 8px;
+    background: $white;
+    z-index: 11;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+
+        h6 {
+            text-transform: uppercase;
+        }
+
+        button {
+            background: none;
+            text-decoration: underline;
+        }
+    }
+
+    .product_info {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        margin-block: 24px;
+
+        >:last-child {
+            margin-left: auto;
+        }
+    }
+
+    .summary {
+        display: flex;
+        justify-content: space-between;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+    }
+
+    footer {
+        button {
+            width: 100%;
+        }
+    }
+}
+
+
+@media screen and (min-width : 768px) {
+    .overlay {
+        height: 97.3%;
+        
+    }
+
+    .cart_container {
+        right: calc(anchor(right) + 24px);
+        top: calc(anchor(bottom) + 12px);
+        transform: translateX(0%);
+    }
+}
