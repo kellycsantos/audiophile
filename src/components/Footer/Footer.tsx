@@ -8,7 +8,7 @@ export const Footer = () => {
     return (
         <div className={styles.footer_container}>
             <footer className={styles.footer}>
-                <Image className={styles.logo} src={logo} alt='audiophile' aria-hidden />
+                <Image className={styles.logo} src={logo} alt='logo audiophile' />
 
                 <ul className={styles.nav_section}>
                     <li>
