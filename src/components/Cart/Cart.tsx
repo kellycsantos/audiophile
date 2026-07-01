@@ -18,7 +18,7 @@ const Cart = ({ isOpen }: { isOpen: boolean }) => {
     return (
         isOpen &&
         <>
-            <div className={styles.overlay}>
+            <div className={styles.overlay} aria-modal>
             </div>
             <div className={styles.cart_container} aria-modal>
                 <header>
@@ -36,7 +36,7 @@ const Cart = ({ isOpen }: { isOpen: boolean }) => {
                                     <p>$ {item.price}</p>
                                 </div>
 
-                                <InputQtd value={item.quantity ?? 1} onChange={() => { }} />
+                                <InputQtd value={item.quantity ?? 1} />
                             </div>
                         ))}
 

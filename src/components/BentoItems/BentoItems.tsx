@@ -22,7 +22,7 @@ export const Bento = () => {
                 <Button text={'See Product'} variant='default' />
             </div>
             <div className={`${styles.thirdItem} ${styles.item}`}>
-                <Image src={yx1} alt='' />
+                <Image src={yx1} alt='ZX7 SPEAKER' />
                 <div>
                     <h6>YX1 EARPHONES</h6>
                     <Button text={'See Product'} variant='default' />
