@@ -17,7 +17,9 @@ const Cart = ({ isOpen }: {isOpen: boolean}) => {
 
     return (
         isOpen &&
-        <div className={styles.overlay}>
+        <>
+            <div className={styles.overlay}>
+            </div>
             <div className={styles.cart_container}>
                 <header>
                     <h6>cart ({totalItems})</h6>
@@ -48,7 +50,7 @@ const Cart = ({ isOpen }: {isOpen: boolean}) => {
                     <Button text='checkout' variant='primary' />
                 </footer>
             </div>
-        </div>
+        </>
     )
 }
 
