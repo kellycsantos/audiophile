@@ -1,5 +1,5 @@
 'use client'
-import styles from './bannercategory.module.scss'
+import styles from './BannerCategory.module.scss'
 import { useParams} from 'next/navigation'
 
 const BannerCategory = () => {

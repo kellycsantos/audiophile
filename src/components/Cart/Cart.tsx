@@ -2,7 +2,7 @@
 import { useCartStore } from '@store';
 import { Button } from '../Button';
 import InputQtd from '../InputQntd/InputQntd';
-import styles from './cart.module.scss';
+import styles from './Cart.module.scss';
 import Image from 'next/image';
 
 
