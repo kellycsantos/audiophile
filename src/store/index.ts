@@ -28,18 +28,28 @@ export const useCartStore = create<State & Action>((set, get) => ({
             );
 
             if (exists) {
+                const items = state.items.map((product) =>
+                    product.id === item.id
+                        ? { ...product, quantity: (product.quantity ?? 1) + quantity }
+                        : product,
+                );
+
                 return {
-                    items: state.items.map((product) =>
-                        product.id === item.id
-                            ? { ...product, quantity: (product.quantity ?? 1) + quantity }
-                            : product,
+                    items,
+                    totalItems: items.reduce(
+                        (total, item) => total + (item.quantity ?? 1),
+                        0,
                     ),
                 };
             }
 
+            const items = [...state.items, { ...item, quantity }];
             return {
-                items: [...state.items, { ...item, quantity: quantity }],
-
+                items,
+                totalItems: items.reduce(
+                    (total, item) => total + (item.quantity ?? 1),
+                    0,
+                ),
             };
         })
         get().sumTotalAmount();
