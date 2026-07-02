@@ -1,15 +1,15 @@
 @use '../../styles/_colors.module' as *;
+@use '../../styles/_limit.module' as *;
 
 .page {
     margin-bottom: 75px;
     margin: 24px;
+    @include limit-container(transparent);
 
     .container {
         display: flex;
         flex-direction: column;
         gap: 24px;
-
-
         background: $white;
 
         h4 {
@@ -23,10 +23,6 @@
             margin-bottom: 16px;
         }
 
-        .checkout_container {}
-
-        .summary_container {}
-
         .checkout_container,
         .summary_container {
             padding: 24px;
@@ -34,15 +30,16 @@
             border-radius: 6px;
 
             form {
-                input{
+                input {
                     margin-bottom: 28px;
                 }
+
                 >span {
                     display: flex;
                     flex-direction: column;
                 }
 
-                .radio_container{
+                .radio_container {
                     border: 1px solid $gray-soft;
                     margin-bottom: 5px;
                     display: flex;
@@ -52,14 +49,30 @@
                     font-weight: 700;
                     font-size: 14;
 
-                    input{
-                        border: 1px solid red !important; 
+                    input {
                         margin: 0 16px 0 0;
                     }
                 }
             }
         }
+    }
+}
 
+@media screen and (min-width:768px) {
+    .page {
+        .container {
+            flex-direction: row;
+             gap: 48px;
 
+            .checkout_container {
+                flex: 4;
+            }
+
+            .summary_container {
+                flex: 2;
+                height: max-content;
+                }
+
+        }
     }
 }

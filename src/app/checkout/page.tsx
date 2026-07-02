@@ -4,7 +4,6 @@ const Checkout = () => {
     return (
         <section className={styles.page}>
             <div className={styles.container}>
-
                 <div className={styles.checkout_container}>
                     <h4>checkout</h4>
                     <h5>Billing details</h5>
