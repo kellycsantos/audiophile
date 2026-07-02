@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { persist, createJSONStorage } from 'zustand/middleware';
 import { CartType, ProductType } from '../types';
 
 type State = CartType;
@@ -10,7 +11,8 @@ type Action = {
 }
 
 
-export const useCartStore = create<State & Action>((set, get) => ({
+export const useCartStore = create(
+    persist<State & Action>((set, get) => ({
     totalAmount: 0,
     totalItems: 0,
     items: [],
@@ -64,4 +66,7 @@ export const useCartStore = create<State & Action>((set, get) => ({
             totalItems: 0,
         }),
 
+}), {
+    name: 'cart',
+    storage: createJSONStorage(() => localStorage),
 }))
