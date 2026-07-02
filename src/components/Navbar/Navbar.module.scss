@@ -24,7 +24,7 @@
             position-anchor: --navbar;
             position: absolute;
             top: anchor(bottom);
-            left: anchor(left);
+            left: 0;
             width: 100dvw;
             border-radius: 0 0 6px 6px;
             z-index: 1;
@@ -39,7 +39,6 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: 10px;
 
                 li {
 

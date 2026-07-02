@@ -3,7 +3,7 @@
 
 .page {
     margin-bottom: 75px;
-    margin: 24px;
+    margin-block: 24px; 
     @include limit-container(transparent);
 
     .container {
