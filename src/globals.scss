@@ -74,6 +74,31 @@ p, .body {
 
     }
 }
+label{
+   @include fontConfig(12px, auto, -0.21);
+   font-weight: 700;
+}
+
+input:is(:not(button)){
+  border: 1px solid $gray-soft;
+  padding: 12px 18px;
+  height: 56px;
+  border-radius: 8px;
+  margin-top: 9px;
+  &::placeholder{
+    color: $gray ;
+    font-weight: 700;
+  }
+
+  &[type=radio]{
+   accent-color: $primary;
+   height: 20px;
+   width: 20px;
+  }
+
+}
+
+
 
 @media (prefers-color-scheme: dark) {
   html {
