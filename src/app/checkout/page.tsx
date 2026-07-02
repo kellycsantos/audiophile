@@ -60,15 +60,15 @@ const Checkout = () => {
                                 Payment Method
                             </label>
 
-                            <span className={styles.radio_container}>
+                            <label className={styles.radio_container}>
                                 <input type='radio' value={'e-money'} name='payment_method' />
                                 e-Money
-                            </span>
+                            </label>
 
-                            <span className={styles.radio_container}>
+                            <label className={styles.radio_container}>
                                 <input type='radio' value={'cash'} name='payment_method' />
                                 Cash on Delivery
-                            </span>
+                            </label>
                         </span>
 
                         <span>
